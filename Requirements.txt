@@ -5,3 +5,15 @@ pandas
 numpy
 dvc
 pyYAML
+tensorflow
+notebook
+matplotlib
+seaborn
+python-box==6.0.2
+tqdm
+joblib
+types-pyYAML
+scipy
+flask
+flask-cors
+-e .
