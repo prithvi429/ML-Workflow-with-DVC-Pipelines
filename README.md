@@ -31,4 +31,4 @@ This project demonstrates a complete machine learning workflow for chicken disea
 4. Run notebooks in the `research/` folder for experiments.
 
 ## Version Control
-All data, code, and models are tracked using DVC and Git for full reproducibility.
+All data, code, and models are tracked using DVC and Git for full reproducibility
