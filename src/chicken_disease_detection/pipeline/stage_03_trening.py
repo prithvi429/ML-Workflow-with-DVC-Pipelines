@@ -1,4 +1,3 @@
-
 from src.chicken_disease_detection.config.configuration import ConfigurationManager
 from src.chicken_disease_detection import logger
 from src.chicken_disease_detection.components.trening import Training
@@ -41,4 +40,3 @@ if __name__ == '__main__':
     except Exception as e:
         logger.exception(e)
         raise e
-        

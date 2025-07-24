@@ -7,7 +7,6 @@ stages:
     outs:
       - artifacts/data_ingestion/Chicken-fecal-images
 
-
   prepare_base_model:
     cmd: python src/chicken_disease_detection/pipeline/stage_02_prepare_base_model.py
     deps:
@@ -22,13 +21,11 @@ stages:
     outs:
       - artifacts/prepare_base_model
 
-
-
   training:
-    cmd: python src/chicken_disease_detection/pipeline/stage_03_training.py
+    cmd: python src/chicken_disease_detection/pipeline/stage_03_trening.py
     deps:
-      - src/chicken_disease_detection/pipeline/stage_03_training.py
-      - src/chicken_disease_detection/components/prepare_callbacks.py
+      - src/chicken_disease_detection/pipeline/stage_03_trening.py
+      - src/chicken_disease_detection/components/prepare_callback.py
       - config/config.yaml
       - artifacts/data_ingestion/Chicken-fecal-images
       - artifacts/prepare_base_model
@@ -39,9 +36,6 @@ stages:
       - AUGMENTATION
     outs:
       - artifacts/training/model.h5
-
-
-  
 
   evaluation:
     cmd: python src/chicken_disease_detection/pipeline/stage_04_evaluation.py
@@ -54,5 +48,5 @@ stages:
       - IMAGE_SIZE
       - BATCH_SIZE
     metrics:
-    - scores.json:
-        cache: false
+      - scores.json:
+          cache: false

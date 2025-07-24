@@ -4,6 +4,8 @@ import zipfile
 from src.chicken_disease_detection.utils.common import get_size
 from src.chicken_disease_detection import logger
 from src.chicken_disease_detection.entity.config_entity import DataIngestionConfig
+from src.chicken_disease_detection.config.configuration import ConfigurationManager
+
 
 
 class DataIngestion:
